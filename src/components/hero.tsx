@@ -11,7 +11,7 @@ export default function Hero() {
                 </p>
             </div>
         
-            <img className="hero-section--intro-graphic" src="/svgs/graphic/graphic.svg"/>
+            <img className="hero-section--intro-graphic" src="svgs/graphic/graphic.svg"/>
   
         </section>
     )
