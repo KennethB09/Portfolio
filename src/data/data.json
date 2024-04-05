@@ -1,0 +1,75 @@
+[
+    {
+        "projectData" : [
+            {
+                "title": "Interactive Comment Section",
+                "des": "A Frontend.io Challenge. I built it with React.js",
+                "thumbNail": "images/FireShot Capture 019 - Frontend Mentor - Interactive comments section - kennethb09.github.io.png",
+                "link": "https://kennethb09.github.io/Interactive_comment_section-frontend_mentor/",
+                "icon": ""
+            },
+            {
+                "title": "CryptoCat",
+                "des": "A Cat Themed Crypto Landing Page that I built with HTML and CSS.",
+                "thumbNail": "/images/CryptoCat.png",
+                "link": "https://kennethb09.github.io/Cat/",
+                "icon": ""
+            },
+            {
+                "title": "Catchat",
+                "des": "A Cat Themed Full-stack Messaging Web Application, using EJS as Template Engine for Front-end, and I built the Back-end with Node.js and Express.js, Socket.io for real time messaging, and MonggoDB for Database.",
+                "thumbNail": "/images/catchat.png",
+                "link": "",
+                "icon": ""
+            }
+        ]
+    },
+    {
+        "languageSkills" : [
+            {
+                "name": "HTML",
+                "logo": "/svgs/language logo/HTML5_Badge.svg"
+            },
+            {
+                "name": "CSS",
+                "logo": "/svgs/language logo/css-3.png"
+            },
+            {
+                "name": "JavaScript",
+                "logo": "/svgs/language logo/Unofficial_JavaScript_logo_2.svg"
+            },
+            {
+                "name": "React.js",
+                "logo": "/svgs/language logo/react.svg"
+            },
+            {
+                "name": "TypeScript",
+                "logo": "/svgs/language logo/ts-logo-512.svg"
+            },
+            {
+                "name": "Node.js",
+                "logo": "/svgs/language logo/nodejs-icon.svg"
+            }
+        ]
+    },
+    {
+        "toolIUse" : [
+            {
+                "name": "Canva",
+                "logo": "/svgs/tools logo/canva-icon.svg"
+            },
+            {
+                "name": "Figma",
+                "logo": "/svgs/tools logo/figma-svgrepo-com.svg"
+            },
+            {
+                "name": "VS Code",
+                "logo": "/svgs/tools logo/visual-studio-code-1.svg"
+            },
+            {
+                "name": "Git",
+                "logo": "/svgs/tools logo/github-mark-white.svg"
+            }
+        ]
+    }
+]
