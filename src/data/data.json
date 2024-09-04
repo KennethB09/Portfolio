@@ -2,25 +2,25 @@
     {
         "projectData" : [
             {
-                "title": "Interactive Comment Section",
-                "des": "A Frontend.io Challenge. I built it with React.js",
-                "thumbNail": "images/FireShot Capture 019 - Frontend Mentor - Interactive comments section - kennethb09.github.io.png",
-                "link": "https://kennethb09.github.io/Interactive_comment_section-frontend_mentor/",
-                "icon": ""
+                "title": "My Portfolio",
+                "des": "Welcome to my portfolio website, crafted with React and TypeScript, and styled with CSS. This site showcases my commitment to clean, responsive design and seamless user experiences. Dive in to explore a collection of projects demonstrating my skills in front-end development and my ability to create dynamic, visually appealing web applications.",
+                "thumbNail": ["images/FireShot Capture 056 - Kenneth Bacaltos - localhost.png"],
+                "link": "",
+                "icon": ["svgs/language logo/react.svg", "svgs/language logo/ts-logo-512.svg", "svgs/language logo/css-3.png"]
             },
             {
                 "title": "CryptoCat",
                 "des": "A Cat Themed Crypto Landing Page that I built with HTML and CSS.",
-                "thumbNail": "images/CryptoCat.png",
+                "thumbNail": ["images/CryptoCat Design.png", "images/CryptoCat Login.png", "images/CryptoCat Mobile.png"],
                 "link": "https://kennethb09.github.io/Cat/",
-                "icon": ""
+                "icon": ["svgs/language logo/HTML5_Badge.svg", "svgs/language logo/css-3.png"]
             },
             {
                 "title": "Catchat",
-                "des": "A Cat Themed Full-stack Messaging Web Application, using EJS as Template Engine for Front-end, and I built the Back-end with Node.js and Express.js, Socket.io for real time messaging, and MonggoDB for Database.",
-                "thumbNail": "images/catchat.png",
-                "link": "",
-                "icon": ""
+                "des": "A cat-themed full-stack messaging web application built on the MERN stack, using Socket.io for real-time messaging.",
+                "thumbNail": ["images/Catchat Home.png", "images/Catchat Home Light Mode.png", "images/Catchat Login.png", "images/Catchat Mobile.png"],
+                "link": "https://catchat-web-chat-application.onrender.com",
+                "icon": ["svgs/language logo/react.svg", "svgs/language logo/ts-logo-512.svg", "svgs/language logo/nodejs-icon.svg", "svgs/language logo/tailwindcss-logo.svg"]
             }
         ]
     },
@@ -33,6 +33,10 @@
             {
                 "name": "CSS",
                 "logo": "svgs/language logo/css-3.png"
+            },
+            {
+                "name": "Tailwindcss",
+                "logo": "svgs/language logo/tailwindcss-logo.svg"
             },
             {
                 "name": "JavaScript",
