@@ -11,8 +11,10 @@
   --purple-fnt-clr: #5D3FD3;
   --black-bg-clr: #1E1E1E;
   --gray-bg-clr: #28282B;
+  --header-bg: rgba(30, 30, 30, .5);
 
-  --body-l-r-padding: max(1rem, 7vw);;
+  --body-l-r-padding: max(1rem, 7vw);
+  ;
 
   --font-family-title: 'Poppins', sans-serif;
   --font-family-parag: "Inter", sans-serif;
@@ -33,15 +35,41 @@
 
 /* HERO SECTION heading - font size 128px - line height 120px, SUB HEADING font size - 40px, line height - 90px */
 
+.dark-mode {
+  --black-bg-clr: #FFFFFF;
+  --white-fnt-clr: #28282B;
+  --purple-fnt-clr: #5D3FD3;
+  --gray-bg-clr: #e2e2e2;
+  --header-bg: rgba(255, 255, 255, .5);
+
+  nav {
+    .li-container {
+
+      button {
+  
+        img {
+          filter: invert(24%) sepia(5%) saturate(0%) hue-rotate(218deg) brightness(91%) contrast(122%)
+        }
+      }
+    }
+  }
+}
+
 html {
-  background-color: var(--black-bg-clr);
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: var(--black-bg-clr);
+  transition: .500s ease-in-out;
+}
+
 
 @keyframes fade-in {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -52,6 +80,7 @@ html {
     opacity: 0;
     transform: translateX(-100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0px);
@@ -63,6 +92,7 @@ html {
     opacity: 0;
     transform: translateX(-100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0px);
@@ -74,6 +104,7 @@ html {
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0px);
@@ -93,11 +124,8 @@ header {
   top: 0;
   height: fit-content;
   z-index: 99;
-  background-color: rgba(30, 30, 30, .5);
-
-  @media (min-width: 450px) {
-    backdrop-filter: blur(8px);
-  }
+  background-color: var(--header-bg);
+  transition: .500s ease-in-out;
 }
 
 /* NAVIGATION */
@@ -117,8 +145,12 @@ nav {
     color: var(--purple-fnt-clr);
   }
 
+  @media (min-width: 426px) {
+    backdrop-filter: blur(8px);
+  }
+
   @media (max-width: 425px) {
-      
+
     .li-container[data-visible="true"] {
       display: block;
       display: flex;
@@ -130,14 +162,15 @@ nav {
       padding: 0 2rem;
       align-items: center;
       z-index: 5;
-      background-color: rgba(108, 122, 137, 0.5);
       backdrop-filter: blur(8px);
+      background-color: var(--header-bg);
       transition: .500s ease-in-out;
       transform: translateX(0%);
     }
 
     .li-container[data-visible="false"] {
       display: block;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -151,11 +184,12 @@ nav {
       transition: .500s ease-in-out;
       transform: translateX(100%);
     }
-    
+
   }
 
   .hamburger-react {
     display: none;
+
     @media (max-width: 425px) {
       display: block;
       z-index: 9999;
@@ -164,13 +198,29 @@ nav {
 
   .li-container {
     display: flex;
+    align-items: center;
     gap: max(16px, 2vw);
     color: var(--white-fnt-clr);
 
-    > li {
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        aspect-ratio: 1;
+        width: 30px;
+        filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(195deg) brightness(106%) contrast(104%)
+      }
+    }
+
+    >li {
       list-style: none;
 
-      > a {
+      >a {
         cursor: pointer;
         font-family: var(--font-family-title);
         font-size: var(--font-size-btn);
@@ -206,26 +256,28 @@ nav {
     @media(max-width: 425px) {
       width: 100%;
     }
-  
-    > h1 {
+
+    >h1 {
       animation: scroll_animation_top 1s linear;
       color: var(--white-fnt-clr);
       font-family: var(--font-family-title);
       font-size: clamp(60px, 7.324vw, 85px);
       line-height: clamp(60px, 6.5vw, 80px);
 
-      > span {
+      >span {
         color: var(--purple-fnt-clr);
       }
     }
-    > h2 {
+
+    >h2 {
       animation: scroll_animation_top 1s linear;
       animation-delay: 0.1s;
       color: var(--white-fnt-clr);
       font-family: var(--font-family-title);
       font-size: clamp(16px, 2.246vw, 40px);
     }
-    > p {
+
+    >p {
       animation: scroll_animation_top 1s linear;
       animation-delay: 0.3s;
       color: var(--white-fnt-clr);
@@ -249,6 +301,7 @@ nav {
 /* ABOUT */
 
 .about-section {
+  transition: .500s ease-in-out;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -280,7 +333,7 @@ nav {
     animation: scroll_animation_right 10s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
-    
+
   }
 
   .about-me--current-endeavors {
@@ -291,11 +344,12 @@ nav {
 
   .about-me-intro-container {
     width: 50%;
+
     @media (max-width: 768px) {
       min-width: 100%;
     }
   }
-  
+
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -308,7 +362,7 @@ nav {
     @media (max-width: 768px) {
       min-width: 100%;
     }
-    
+
     @media (max-width: 425px) {
       flex-direction: column;
     }
@@ -318,7 +372,8 @@ nav {
       width: 2rem;
     }
 
-    .my-skills--language, .my-skills--tools {
+    .my-skills--language,
+    .my-skills--tools {
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -355,7 +410,8 @@ nav {
       font-weight: var(--font-weight-bold);
     }
 
-    .my-skills--language-card, .my-skills--tools-card {
+    .my-skills--language-card,
+    .my-skills--tools-card {
       display: flex;
       width: max-content;
       animation: scroll_animation_top 10s linear;
@@ -372,6 +428,7 @@ nav {
 /* PROJECT */
 
 .projects-section {
+  transition: .500s ease-in-out;
   text-align: center;
   background-color: var(--gray-bg-clr);
   padding-bottom: var(--body-l-r-padding);
@@ -387,12 +444,12 @@ nav {
       font-size: var(--font-size-title);
       color: var(--white-fnt-clr);
       margin-bottom: 1.5rem;
-  
-      > span {
+
+      >span {
         color: var(--purple-fnt-clr);
       }
     }
-  
+
     .projects-para {
       animation: scroll_animation_top 10s linear;
       animation-timeline: view();
@@ -404,6 +461,7 @@ nav {
   }
 
   .projects-list-container {
+    transition: .500s ease-in-out;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -456,28 +514,28 @@ nav {
           height: 100%;
           overflow-x: scroll;
 
-          > h1 {
+          >h1 {
             font-family: var(--font-family-title);
             font-size: var(--font-size-description-title);
             color: var(--white-fnt-clr);
             margin-bottom: .5rem;
           }
 
-          > p {
+          >p {
             font-family: var(--font-family-parag);
             font-size: var(--font-size-parag);
             color: var(--white-fnt-clr);
           }
-  
-          > a {
+
+          >a {
             text-decoration: none;
 
-            > p {
+            >p {
               font-family: var(--font-family-parag);
               font-size: var(--font-size-parag);
               color: var(--white-fnt-clr);
             }
-            
+
             &:hover {
               & p {
                 color: var(--purple-fnt-clr);
@@ -494,13 +552,14 @@ nav {
           overflow-y: scroll;
           gap: 10px;
 
-          > img {
+          >img {
             aspect-ratio: 1;
             width: 1.5rem;
           }
         }
       }
     }
+
     .projects-card:hover {
       .projects-card-des {
         transition: .500s ease-in-out;
@@ -530,20 +589,21 @@ nav {
       text-align: center;
     }
 
-    > h1 {
+    >h1 {
       font-family: var(--font-family-title);
       font-weight: var(--font-weight-extraBold);
       font-size: clamp(18px, 2.5vw, 3rem);
       color: var(--purple-fnt-clr);
     }
 
-    > p {
+    >p {
       font-family: var(--font-family-parag);
       font-weight: var(--font-weight-200);
       font-size: var(--font-size-btn);
       color: var(--white-fnt-clr);
     }
   }
+
   .footer-section-contacts-container {
     display: flex;
     flex-direction: column;
@@ -551,14 +611,15 @@ nav {
     align-items: center;
     width: max(30%, 100%);
 
-    > h1 {
+    >h1 {
       font-family: var(--font-family-parag);
       font-weight: var(--font-weight-200);
       font-size: var(--font-size-parag);
       color: var(--white-fnt-clr);
       margin-bottom: .5rem;
     }
-    > a > h2 {
+
+    >a>h2 {
       font-family: var(--font-family-parag);
       font-weight: var(--font-weight-bold);
       font-style: normal;
@@ -566,6 +627,7 @@ nav {
       color: var(--white-fnt-clr);
     }
   }
+
   .footer-section-socials-container {
     width: max(30%, 100%);
   }

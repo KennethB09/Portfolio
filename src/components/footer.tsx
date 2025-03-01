@@ -3,7 +3,7 @@ export default function Footer() {
         <section id="footerSection" className="footer-section">
             <div className="footer-section-logo-container">
                 <h1>KENNETH</h1>
-                <p>Copyright ©2024 Kenneth</p>
+                <p>Copyright ©2025 Kenneth</p>
             </div>
             <div className="footer-section-contacts-container">
                 <h1>
